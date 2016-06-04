@@ -1,28 +1,28 @@
 import telebot
-from telebot import types
+from state_machine import *
 
 TOKEN = '239519305:AAH-1nJiWwqyigWQvg-qxZKpo6nnKpGh2sU' #Ponemos nuestro TOKEN generado con el @BotFather
 bot = telebot.TeleBot(TOKEN)
 
 
-markup = types.ReplyKeyboardMarkup()
-markup.row('a')
-markup.row('b')
+currentState = Initial()
+
 
 @bot.message_handler(commands=['start', 'help'])
-def send_welcome(message):
-    bot.send_message(message.chat.id, "Hi, how you doing?", reply_markup=markup)
+def send_welcome(answer):
+    bot.send_message(
+        answer.chat.id, 
+        currentState.message(), 
+        reply_markup=currentState.markup())
 
-@bot.message_handler(regexp="stressed")
-def handle_message(message):
-    # pass
-    bot.reply_to(message, "Oooh, sorry to hear it. What is stressing you??")
-
-@bot.message_handler(regexp="boring")
-def handle_message_(message):
-    # pass
-    bot.reply_to(message, "Do you want to do something?")
-
+@bot.message_handler(func=lambda m: True)
+def handle_message(answer):
+    chat_id = answer.chat.id
+    currentState = currentState.next(answer)
+    bot.reply_to(
+        chat_id, 
+        currentState.message(), 
+        reply_markup=currentState.markup())
 
 
 bot.polling()
