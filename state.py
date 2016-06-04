@@ -14,6 +14,6 @@ class State:
         next_state = self.options.get(answer, None)
         if not next_state:
             next_state = State(message="Ooops, something went wrong :(")
-       else:
+        else:
             next_state = next_state()
         return next_state
