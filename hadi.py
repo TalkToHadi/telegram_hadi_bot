@@ -326,6 +326,14 @@ STATES = {
         'options': []
     },
 
+    "I'm angry": {
+        'message': (
+            "Try theese: \n",
+            "http://www.apa.org/topics/anger/control.aspx",
+            "http://www.mind.org.uk/information-support/types-of-mental-health-problems/anger/#.V1OUhJN95E4"
+        ),
+        'options': []
+    },
 
 
 
@@ -344,6 +352,7 @@ STATES = {
             "I miss my country",
             "I feel lonely",
             "I'm feeling ill",
+            "I'm angry",
             "None of that",
         ]
     },
