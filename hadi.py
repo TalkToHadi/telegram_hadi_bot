@@ -163,10 +163,10 @@ STATES = {
         ),
         'options': [
             "Yeah, I'd love to!",
-            "Not right now",
+            "Rather not",
         ]
     },
-    "Not right now": {
+    "Rather not": {
         'message': (
             "What about watching some funny videos?"
         ),
@@ -272,8 +272,6 @@ STATES = {
         ),
         'options': []
     },
-
-
     "Someone to talk to": {
         'message': (
             "Would you like to meet new people?"
