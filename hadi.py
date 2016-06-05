@@ -320,4 +320,4 @@ def handle_message(answer):
             chat_id,
             next_state['message'])
 
-bot.polling()
+bot.polling(none_stop=True)
