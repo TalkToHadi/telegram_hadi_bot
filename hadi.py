@@ -286,7 +286,8 @@ STATES = {
 
 def generate_markup(state):
     if not state['options']:
-        return None
+        return types.ReplyKeyboardHide(selective=False)
+        
     markup = types.ReplyKeyboardMarkup()
     for option in state['options']:
         markup.row(option)
@@ -312,14 +313,9 @@ def handle_message(answer):
     chat_id = answer.chat.id
     next_state = STATES.get(answer.text, STATES['Initial'])
     markup = generate_markup(next_state)
-    if markup:
-        bot.send_message(
-            chat_id,
-            next_state['message'],
-            reply_markup=markup)
-    else:
-        bot.send_message(
-            chat_id,
-            next_state['message'])
+    bot.send_message(
+        chat_id,
+        next_state['message'],
+        reply_markup=markup)
 
 bot.polling(none_stop=True)
