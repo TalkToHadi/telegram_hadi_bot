@@ -11,8 +11,10 @@ bot = telebot.TeleBot(TOKEN)
 STATES = {
     'Initial': {
         'message': (
-            "Hi there. My name is Hadi :)"
-            "What language do you want to speak with me?"
+            "Hi there. My name is Hadi :) \n"
+            "What language do you want to speak with me? \n"
+            "مرحبا! \n"
+            "اسمي هادي  بأية لغة تود أن نتحدث؟"
         ),
         'options': [
             'English',
