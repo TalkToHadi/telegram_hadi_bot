@@ -8,11 +8,16 @@ from telebot import types
 TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
 bot = telebot.TeleBot(TOKEN)
 
+Lina H, [05.06.16 11:30]
+
+
 STATES = {
     'Initial': {
         'message': (
-            "Hi there. My name is Hadi :)"
-            "What language do you want to speak with me?"
+            "Hi there. My name is Hadi :) \n"
+            "What language do you want to speak with me? \n"
+            "مرحبا! \n"
+            "اسمي هادي  بأية لغة تود أن نتحدث؟"
         ),
         'options': [
             'English',
