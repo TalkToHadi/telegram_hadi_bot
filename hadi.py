@@ -94,6 +94,7 @@ STATES = {
     "I'm mentally exhausted": {
         'message': (
             "Try an app like HeadSpace to learn how to meditate"
+            "https://www.headspace.com/"
         ),
         'options': [
 
@@ -182,6 +183,7 @@ STATES = {
     "I'm feeling ill": {
         'message': (
             "Look this awesome link to german national health system"
+            "http://www.howtogermany.com/pages/healthinsurance.html"
         ),
         'options': [
 
