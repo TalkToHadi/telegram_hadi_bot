@@ -291,11 +291,6 @@ STATES = {
             "Someone to talk to",
         ]
     },
-
-
-
-
-
     "I'm sad": {
         'message': (
             "how long have you been sad?"
@@ -305,7 +300,6 @@ STATES = {
             "Actually, longer than a month",
         ]
     },
-
     "For less than a month": {
         'message': (
             "Try to get some ideas from here",
