@@ -291,21 +291,21 @@ def generate_markup(state):
     return markup
 
 
-@bot.message_handler(commands=['start', 'help'])
-def send_welcome(answer):
-    initial = STATES['Initial']
-    markup = generate_markup(initial)
-    if markup:
-        bot.send_message(
-            answer.chat.id,
-            initial['message'],
-            reply_markup=markup)
-    else:
-        bot.send_message(
-            answer.chat.id,
-            initial['message'])
+# @bot.message_handler(commands=['start', 'help'])
+# def send_welcome(answer):
+#     initial = STATES['Initial']
+#     markup = generate_markup(initial)
+#     if markup:
+#         bot.send_message(
+#             answer.chat.id,
+#             initial['message'],
+#             reply_markup=markup)
+#     else:
+#         bot.send_message(
+#             answer.chat.id,
+#             initial['message'])
 
-@bot.message_handler(func=lambda m: m.text!=STATES['Initial']['message'])
+@bot.message_handler(func=lambda m: True)
 def handle_message(answer):
     chat_id = answer.chat.id
     next_state = STATES.get(answer.text, STATES['Initial'])
@@ -320,4 +320,4 @@ def handle_message(answer):
             chat_id,
             next_state['message'])
 
-bot.polling()
+bot.polling(none_stop=True)
