@@ -1,1 +1,1 @@
-web: python hadi.py
+web: python hadi.py ${PORT}
