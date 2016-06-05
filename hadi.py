@@ -64,7 +64,7 @@ STATES = {
     },
     "I need help with my paperwork": {
         'message': (
-            "Sorry, I can't help you with this but I know who can!"
+            "Sorry, I can't help you with this but I know who can! \n"
             "You should check Burocrazy, those guys are cool"
         ),
         'options': [
@@ -81,7 +81,7 @@ STATES = {
     },
     "Maybe on another time": {
         'message': (
-            "Oops, I'm sorry to hear that"
+            "Ooops, I'm sad to hear that! \n"
             "Talk to me later if you want"
         ),
         'options': [
@@ -98,10 +98,10 @@ STATES = {
     },
     "HotLine": {
         'message': (
-            "You need inmediate help!"
-            "Call the emergency hotline"
-            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html"
-            "http://www.frauenhauskoordinierung.de/english-summary.html"
+            "You need inmediate help! \n"
+            "Call the emergency hotline \n"
+            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html \n"
+            "http://www.frauenhauskoordinierung.de/english-summary.html \n"
         ),
         'options': [
 
@@ -109,7 +109,7 @@ STATES = {
     },
     "Yes, of course!": {
         'message': (
-            "Check this web page!"
+            "Check this web page! \n"
             "https://www.youtube.com/results?search_query=funny"
         ),
         'options': [
@@ -118,7 +118,7 @@ STATES = {
     },
     "I'm mentally exhausted": {
         'message': (
-            "Try an app like HeadSpace to learn how to meditate"
+            "Try an app like HeadSpace to learn how to meditate \n"
             "https://www.headspace.com/"
         ),
         'options': [
@@ -127,7 +127,7 @@ STATES = {
     },
     "Yeah, I'd love to!": {
         'message': (
-            "Here you can find cinemas around you!"
+            "Here you can find cinemas around you! \n"
             "https://www.google.com/maps?q=cinema"
         ),
         'options': [
@@ -136,7 +136,7 @@ STATES = {
     },
     "No, not right now": {
         'message': (
-            "Here you can find sports events (and more)!"
+            "Here you can find sports events (and more)! \n"
             "https://www.sportsworld.co.uk/events"
         ),
         'options': [
@@ -152,7 +152,7 @@ STATES = {
     },
     "Not interested, I'm still bored": {
         'message': (
-            "Some ideas for you to enjoy:"
+            "Some ideas for you to enjoy: \n"
             "https://www.buzzfeed.com/leonoraepstein/things-to-do-when-you-are-bored-out-of-your-mind?utm_term=.qi5x2v7Gd#.qv6JEANy7"
         ),
         'options': []
@@ -171,13 +171,13 @@ STATES = {
             "What about watching some funny videos?"
         ),
         'options': [
-            "Yes, of course!",
+            "Yes, of course! \n",
             "Not really",
         ]
     },
     "Yeah, sure!": {
         'message': (
-            "Check MeetUp! You'll find something you like for sure"
+            "Check MeetUp! You'll find something you like for sure \n"
             "http://www.meetup.com/"
         ),
         'options': [
@@ -186,7 +186,7 @@ STATES = {
     },
     "I would like to find cool things to do around": {
         'message': (
-            "Check MeetUp! You'll find something you like for sure"
+            "Check MeetUp! You'll find something you like for sure \n"
             "http://www.meetup.com/"
         ),
         'options': [
@@ -195,7 +195,7 @@ STATES = {
     },
     "It would be cool to join some activity": {
         'message': (
-            "Check MeetUp! You'll find something you like for sure"
+            "Check MeetUp! You'll find something you like for sure \n"
             "http://www.meetup.com/"
         ),
         'options': [
@@ -221,7 +221,7 @@ STATES = {
     },
     "I'm feeling ill": {
         'message': (
-            "Look this awesome link to german national health system"
+            "Look this awesome link to german national health system \n"
             "http://www.howtogermany.com/pages/healthinsurance.html"
         ),
         'options': [
@@ -230,7 +230,7 @@ STATES = {
     },
     "Not right now": {
         'message': (
-            "Watch this inpirational talks on how to deal with feeling lonely"
+            "Watch this inpirational talks on how to deal with feeling lonely \n"
             "http://www.keepinspiring.me/25-creative-and-surprising-things-to-do-when-you-feel-lonely/"
         ),
         'options': [
@@ -239,7 +239,7 @@ STATES = {
     },
     "Some food would be great": {
         'message': (
-            "Try searching at GoogleMaps :)"
+            "Try searching at GoogleMaps :)  \n"
             "https://www.google.com/maps"
         ),
         'options': [
@@ -248,7 +248,7 @@ STATES = {
     },
     "I want to go somewhere": {
         'message': (
-            "Try searching at GoogleMaps :)"
+            "Try searching at GoogleMaps :)  \n"
             "https://www.google.com/maps"
         ),
         'options': [
@@ -296,7 +296,7 @@ STATES = {
     },
     "Not feeling great today :(": {
         'message': (
-            "So sorry to hear that. "
+            "So sorry to hear that.  \n"
             "Whats wrong?"
         ),
         'options': [
@@ -331,20 +331,6 @@ def generate_markup(state):
         markup.row(option)
     return markup
 
-
-# @bot.message_handler(commands=['start', 'help'])
-# def send_welcome(answer):
-#     initial = STATES['Initial']
-#     markup = generate_markup(initial)
-#     if markup:
-#         bot.send_message(
-#             answer.chat.id,
-#             initial['message'],
-#             reply_markup=markup)
-#     else:
-#         bot.send_message(
-#             answer.chat.id,
-#             initial['message'])
 
 @bot.message_handler(func=lambda m: True)
 def handle_message(answer):
