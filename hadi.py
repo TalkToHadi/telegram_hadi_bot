@@ -253,9 +253,29 @@ STATES = {
         'options': [
             "I want to go somewhere",
             "I need help with my paperwork",
-            "Someone to talk to",      
+            "Someone to talk to",
         ]
     },
+
+
+
+
+
+ #   "I'm sad": {
+ #       'message': (
+ #           "how long have you been sad?"
+ #       ),
+ #       'options': [
+ #           "I want to go somewhere",
+ #           "I need help with my paperwork",
+ #           "Someone to talk to",
+ #       ]
+ #   },
+
+
+
+
+
     "Not feeling great today :(": {
         'message': (
             "So sorry to hear that. "
@@ -266,6 +286,7 @@ STATES = {
             "I'm stressed with paperwork",
             "I'm lost",
             "I'm tired",
+            "I'm sad",
             "I miss my country",
             "I feel lonely",
             "I'm feeling ill",
@@ -287,7 +308,7 @@ STATES = {
 def generate_markup(state):
     if not state['options']:
         return types.ReplyKeyboardHide(selective=False)
-        
+
     markup = types.ReplyKeyboardMarkup()
     for option in state['options']:
         markup.row(option)
