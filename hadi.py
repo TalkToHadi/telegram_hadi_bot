@@ -14,7 +14,7 @@ STATES = {
             "Hi there. My name is Hadi :) \n"
             "What language do you want to speak with me? \n"
             "مرحبا! \n"
-            "اسمي هادي  بأية لغة تود أن نتحدث؟"
+            "اسمي هادي  بأية لغة تود أن نتحدث؟ \n"
         ),
         'options': [
             'English',
