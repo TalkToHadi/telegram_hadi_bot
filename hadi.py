@@ -1,10 +1,11 @@
 import telebot
 from telebot import types
 
-port = process.env.PORT or 8443;
-host = process.env.HOST;
+
+os.getenv(PORT, 8080)
+os.getenv(IP, 0.0.0.0)
 TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
-bot = telebot.TeleBot(TOKEN, {webHook: {port: port, host: host}})
+bot = telebot.TeleBot(TOKEN)
 
 STATES = {
     'Initial': {
