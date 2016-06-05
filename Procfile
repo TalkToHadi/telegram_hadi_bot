@@ -1,1 +1,1 @@
-web: python hadi.py
+worker: python hadi.py
