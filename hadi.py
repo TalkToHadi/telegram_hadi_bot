@@ -123,14 +123,28 @@ STATES = {
 
         ]
     },
-    "Not right now": {
+    "No, Not right now": {
         'message': (
             "Here you can find sports events (and more)!"
             "https://www.sportsworld.co.uk/events"
         ),
         'options': [
-
+            "Ok, not bored anymore",
+            "Not interested, I'm still bored"
         ]
+    },
+    "Ok, not bored anymore": {
+        'message': (
+            "Great!"
+        ),
+        'options': []
+    },
+    "Not interested, I'm still bored": {
+        'message': (
+            "Some ideas for you to enjoy:"
+            "https://www.buzzfeed.com/leonoraepstein/things-to-do-when-you-are-bored-out-of-your-mind?utm_term=.qi5x2v7Gd#.qv6JEANy7"
+        ),
+        'options': []
     },
     "Not really": {
         'message': (
@@ -183,7 +197,7 @@ STATES = {
         ),
         'options': [
             "Yeah, sure!",
-            "Not right now",
+            "No, Not right now",
         ]
     },
     "I'm tired": {
@@ -266,7 +280,7 @@ STATES = {
         'options': [
             "I want to go somewhere",
             "I need help with my paperwork",
-            "Someone to talk to",      
+            "Someone to talk to",
         ]
     },
     "Not feeling great today :(": {
