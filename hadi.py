@@ -96,17 +96,6 @@ STATES = {
 
         ]
     },
-    "HotLine": {
-        'message': (
-            "You need inmediate help!"
-            "Call the emergency hotline"
-            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html"
-            "http://www.frauenhauskoordinierung.de/english-summary.html"
-        ),
-        'options': [
-
-        ]
-    },
     "Yes, of course!": {
         'message': (
             "Check this web page!"
@@ -307,16 +296,31 @@ STATES = {
 
 
 
- #   "I'm sad": {
- #       'message': (
- #           "how long have you been sad?"
- #       ),
- #       'options': [
- #           "I want to go somewhere",
- #           "I need help with my paperwork",
- #           "Someone to talk to",
- #       ]
- #   },
+    "I'm sad": {
+        'message': (
+            "how long have you been sad?"
+        ),
+        'options': [
+            "For less than a month",
+            "Actually, longer than a month",
+        ]
+    },
+
+    "For less than a month": {
+        'message': (
+            "Try to get some ideas from here",
+            "https://www.ted.com/talks/dan_gilbert_asks_why_are_we_happy"
+        ),
+        'options': []
+    },
+    "Actually, longer than a month": {
+        'message': (
+            "Just to let you know, here are some helpful advices"
+            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html"
+            "http://www.frauenhauskoordinierung.de/english-summary.html"
+        ),
+        'options': []
+    },
 
 
 
