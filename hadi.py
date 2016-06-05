@@ -123,7 +123,7 @@ STATES = {
 
         ]
     },
-    "No, Not right now": {
+    "No, not right now": {
         'message': (
             "Here you can find sports events (and more)!"
             "https://www.sportsworld.co.uk/events"
@@ -197,7 +197,7 @@ STATES = {
         ),
         'options': [
             "Yeah, sure!",
-            "No, Not right now",
+            "No, not right now",
         ]
     },
     "I'm tired": {
