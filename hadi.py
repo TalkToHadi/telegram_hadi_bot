@@ -2,8 +2,6 @@ import telebot
 from telebot import types
 
 
-os.getenv(PORT, 8080)
-os.getenv(IP, 0.0.0.0)
 TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
 bot = telebot.TeleBot(TOKEN)
 
