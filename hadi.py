@@ -255,7 +255,7 @@ STATES = {
     },
     "Not feeling great today :(": {
         'message': (
-            "So sorry to hear that"
+            "So sorry to hear that. "
             "Whats wrong?"
         ),
         'options': [
@@ -273,7 +273,7 @@ STATES = {
 
 
 
-def markup(state):
+def generate_markup(state):
     markup = types.ReplyKeyboardMarkup()
     for option in state['options']:
         markup.row(option)
@@ -283,19 +283,30 @@ def markup(state):
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(answer):
     initial = STATES['Initial']
-    bot.send_message(
-        answer.chat.id,
-        initial['message'],
-        reply_markup=markup(initial))
+    markup = generate_markup(initial)
+    if markup:
+        bot.send_message(
+            answer.chat.id,
+            initial['message'],
+            reply_markup=markup)
+    else:
+        bot.send_message(
+            answer.chat.id,
+            initial['message'])
 
 @bot.message_handler(func=lambda m: m.text!=STATES['Initial']['message'])
 def handle_message(answer):
     chat_id = answer.chat.id
     next_state = STATES.get(answer.text, STATES['Initial'])
-    bot.send_message(
-        chat_id,
-        next_state['message'],
-        reply_markup=markup(next_state))
-
+    markup = generate_markup(next_state)
+    if markup:
+        bot.send_message(
+            chat_id,
+            next_state['message'],
+            reply_markup=markup)
+    else:
+        bot.send_message(
+            chat_id,
+            next_state['message'])
 
 bot.polling()
