@@ -8,9 +8,6 @@ from telebot import types
 TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
 bot = telebot.TeleBot(TOKEN)
 
-Lina H, [05.06.16 11:30]
-
-
 STATES = {
     'Initial': {
         'message': (
