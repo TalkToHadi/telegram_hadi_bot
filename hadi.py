@@ -239,8 +239,8 @@ STATES = {
     },
     "Some food would be great": {
         'message': (
-            "Try searching at GoogleMaps :)  \n"
-            "https://www.google.com/maps"
+            "Try searching at GoogleMaps :) \n"
+            "https://www.google.com/mapsq=restaurants"
         ),
         'options': [
 
@@ -260,10 +260,20 @@ STATES = {
             "It's hard to be away from home"
         ),
         'options': [
+            "I could use some advice about homesickness",
             "Some food would be great",
             "I would like to find cool things to do around",
         ]
     },
+    "I could use some advice about homesickness": {
+        'message': (
+            "Try this one ;)",
+            "http://www.gooverseas.com/blog/ways-reduce-homesickness-abroad"
+        ),
+        'options': []
+    },
+
+
     "Someone to talk to": {
         'message': (
             "Would you like to meet new people?"
