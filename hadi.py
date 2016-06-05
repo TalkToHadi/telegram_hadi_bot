@@ -114,9 +114,14 @@ STATES = {
             "Try an app like HeadSpace to learn how to meditate \n"
             "https://www.headspace.com/"
         ),
-        'options': [
-
-        ],
+        'options': [],
+    },
+    "I'm physically exhausted": {
+        'message': (
+            "This is a medical help list, try it :) \n"
+            "http://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075"
+        ),
+        'options': [],
     },
     "Yeah, I'd love to!": {
         'message': (
@@ -210,6 +215,7 @@ STATES = {
         ),
         'options': [
             "I'm mentally exhausted",
+            "I'm physically exhausted"
         ]
     },
     "I'm feeling ill": {
@@ -306,14 +312,14 @@ STATES = {
     },
     "For less than a month": {
         'message': (
-            "Try to get some ideas from here\n",
+            "Try to get some ideas from here \n",
             "https://www.ted.com/talks/dan_gilbert_asks_why_are_we_happy"
         ),
         'options': []
     },
     "Actually, longer than a month": {
         'message': (
-            "Just to let you know, here are some helpful advices\n"
+            "Just to let you know, here are some helpful advices \n"
             "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html \n"
             "http://www.frauenhauskoordinierung.de/english-summary.html"
         ),
