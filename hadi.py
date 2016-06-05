@@ -312,15 +312,15 @@ STATES = {
     },
     "For less than a month": {
         'message': (
-            "Try to get some ideas from here \n",
+            "Try to get some ideas from here \n"
             "https://www.ted.com/talks/dan_gilbert_asks_why_are_we_happy"
         ),
         'options': []
     },
     "Actually, longer than a month": {
         'message': (
-            "Just to let you know, here are some helpful advices \n",
-            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html \n",
+            "Just to let you know, here are some helpful advices \n"
+            "http://www.suicide.org/hotlines/international/germany-suicide-hotlines.html \n"
             "http://www.frauenhauskoordinierung.de/english-summary.html"
         ),
         'options': []
@@ -328,8 +328,8 @@ STATES = {
 
     "I'm angry": {
         'message': (
-            "Try theese: \n",
-            "http://www.apa.org/topics/anger/control.aspx \n",
+            "Try theese: \n"
+            "http://www.apa.org/topics/anger/control.aspx \n"
             "http://www.mind.org.uk/information-support/types-of-mental-health-problems/anger/#.V1P_XvmLS01"
         ),
         'options': []
