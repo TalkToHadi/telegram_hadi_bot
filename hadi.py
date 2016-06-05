@@ -272,8 +272,6 @@ STATES = {
         ),
         'options': []
     },
-
-
     "Someone to talk to": {
         'message': (
             "Would you like to meet new people?"
