@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import telebot
 from telebot import types
 
@@ -8,7 +11,28 @@ bot = telebot.TeleBot(TOKEN)
 STATES = {
     'Initial': {
         'message': (
-            "Hi there. My name is Hadi, I'm here for you. What's up?"
+            "Hi there. My name is Hadi :) \n"
+            "What language do you want to speak with me? \n"
+            "مرحبا! \n"
+            "اسمي هادي  بأية لغة تود أن نتحدث؟"
+        ),
+        'options': [
+            'English',
+            'العربية',
+        ]
+    },
+    'العربية': {
+        'message': (
+            "أنا هنا من أجلك. ماذا تفعل؟"
+        ),
+        'options': [
+            "أشعر حتى! :D",
+            "لا شعور عظيم اليوم :(",
+        ]
+    },
+    'English': {
+        'message': (
+            "I'm here for you. What's up?"
         ),
         'options': [
             "I'm feeling up! :D",
@@ -110,14 +134,28 @@ STATES = {
 
         ]
     },
-    "Not right now": {
+    "No, not right now": {
         'message': (
             "Here you can find sports events (and more)!"
             "https://www.sportsworld.co.uk/events"
         ),
         'options': [
-
+            "Ok, not bored anymore",
+            "Not interested, I'm still bored"
         ]
+    },
+    "Ok, not bored anymore": {
+        'message': (
+            "Great!"
+        ),
+        'options': []
+    },
+    "Not interested, I'm still bored": {
+        'message': (
+            "Some ideas for you to enjoy:"
+            "https://www.buzzfeed.com/leonoraepstein/things-to-do-when-you-are-bored-out-of-your-mind?utm_term=.qi5x2v7Gd#.qv6JEANy7"
+        ),
+        'options': []
     },
     "Not really": {
         'message': (
@@ -170,7 +208,7 @@ STATES = {
         ),
         'options': [
             "Yeah, sure!",
-            "Not right now",
+            "No, not right now",
         ]
     },
     "I'm tired": {
@@ -202,7 +240,7 @@ STATES = {
     "Some food would be great": {
         'message': (
             "Try searching at GoogleMaps :)"
-            "https://www.google.com/maps"
+            "https://www.google.com/mapsq=restaurants"
         ),
         'options': [
 
@@ -222,9 +260,17 @@ STATES = {
             "It's hard to be away from home"
         ),
         'options': [
+            "I could use some advice about homesickness",
             "Some food would be great",
             "I would like to find cool things to do around",
         ]
+    },
+    "I could use some advice about homesickness": {
+        'message': (
+            "Try this one ;)",
+            "http://www.gooverseas.com/blog/ways-reduce-homesickness-abroad"
+        ),
+        'options': []
     },
     "Someone to talk to": {
         'message': (
