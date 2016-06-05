@@ -285,6 +285,8 @@ STATES = {
 
 
 def generate_markup(state):
+    if not state['options']:
+        return None
     markup = types.ReplyKeyboardMarkup()
     for option in state['options']:
         markup.row(option)
