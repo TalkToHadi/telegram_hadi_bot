@@ -1,8 +1,12 @@
 import telebot
 from telebot import types
 
+var port = process.env.PORT || 8443;
+var host = process.env.HOST;
+#var bot = new TelegramBot(token, {webHook: {port: port, host: host}});
+
 TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN, {webHook: {port: port, host: host}})
 
 STATES = {
     'Initial': {
