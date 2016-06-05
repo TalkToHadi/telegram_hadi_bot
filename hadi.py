@@ -248,9 +248,9 @@ STATES = {
     },
     "I'm lost": {
         'message': (
-            "I want to go somewhere",
-            "I need help with my paperwork",
-            "Someone to talk to",
+            "I want to go somewhere"
+            "I need help with my paperwork"
+            "Someone to talk to"
         ),
         'options': [
             "What are you looking for?"
