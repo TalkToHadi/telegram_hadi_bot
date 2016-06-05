@@ -333,7 +333,7 @@ STATES = {
 
 
 def generate_markup(state):
-    if not state['options']:
+    if not state.get('options'):
         return types.ReplyKeyboardHide(selective=False)
 
     markup = types.ReplyKeyboardMarkup()
