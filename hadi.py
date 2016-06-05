@@ -285,9 +285,14 @@ STATES = {
 
 def generate_markup(state):
     markup = types.ReplyKeyboardMarkup()
-    for option in state['options']:
-        markup.row(option)
-    return markup
+    if state['options']:
+        for option in state['options']:
+            markup.row(option)
+        return markup
+    else:
+        bot.send_message(
+            answer.chat.id,
+            initial['message'])
 
 
 @bot.message_handler(commands=['start', 'help'])
