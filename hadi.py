@@ -65,7 +65,7 @@ STATES = {
     "I need help with my paperwork": {
         'message': (
             "Sorry, I can't help you with this but I know who can! \n"
-            "You should check Burocrazy, those guys are cool"
+            "You should check Burocrazy, those guys are cool \n"
         ),
         'options': [
 
