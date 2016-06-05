@@ -266,7 +266,7 @@ STATES = {
     },
     "I could use some advice about homesickness": {
         'message': (
-            "Try this one ;)",
+            "Try this one ;) \n"
             "http://www.gooverseas.com/blog/ways-reduce-homesickness-abroad"
         ),
         'options': []
