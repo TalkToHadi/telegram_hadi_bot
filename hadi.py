@@ -8,7 +8,17 @@ bot = telebot.TeleBot(TOKEN)
 STATES = {
     'Initial': {
         'message': (
-            "Hi there. My name is Hadi, I'm here for you. What's up?"
+            "Hi there. My name is Hadi :)"
+            "What language do you want to speak with me?"
+        ),
+        'options': [
+            'English',
+            'الإنجليزية',
+        ]
+    },
+    'English': {
+        'message': (
+            "I'm here for you. What's up?"
         ),
         'options': [
             "I'm feeling up! :D",
@@ -287,7 +297,7 @@ STATES = {
 def generate_markup(state):
     if not state['options']:
         return types.ReplyKeyboardHide(selective=False)
-        
+
     markup = types.ReplyKeyboardMarkup()
     for option in state['options']:
         markup.row(option)
