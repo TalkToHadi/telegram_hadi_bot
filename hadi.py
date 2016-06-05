@@ -19,7 +19,7 @@ STATES = {
         'options': [
             'English',
             'العربية',
-        ]
+        ],
     },
     'العربية': {
         'message': (
@@ -28,7 +28,7 @@ STATES = {
         'options': [
             "أشعر حتى! :D",
             "لا شعور عظيم اليوم :(",
-        ]
+        ],
     },
     'English': {
         'message': (
@@ -37,7 +37,7 @@ STATES = {
         'options': [
             "I'm feeling up! :D",
             "Not feeling great today :(",
-        ]
+        ],
     },
     "I'm feeling up! :D": {
         'message': (
@@ -47,7 +47,7 @@ STATES = {
         'options': [
             "Yeah!",
             "Maybe on another time",
-        ]
+        ],
     },
     "Not feelin great today :(": {
         'message': ('Ooops'),
@@ -60,7 +60,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "I need help with my paperwork": {
         'message': (
@@ -69,7 +69,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "None of that": {
         'message': (
@@ -77,7 +77,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "Maybe on another time": {
         'message': (
@@ -86,7 +86,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "Yeah, I would like talk with someone": {
         'message': (
@@ -94,7 +94,11 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
+        'contact': {
+            'name': 'Hans',
+            'phone_number': '+49 629073543'
+        }
     },
     "Yes, of course!": {
         'message': (
@@ -103,7 +107,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "I'm mentally exhausted": {
         'message': (
@@ -112,7 +116,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "Yeah, I'd love to!": {
         'message': (
@@ -121,7 +125,7 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
     },
     "No, not right now": {
         'message': (
@@ -131,20 +135,20 @@ STATES = {
         'options': [
             "Ok, not bored anymore",
             "Not interested, I'm still bored"
-        ]
+        ],
     },
     "Ok, not bored anymore": {
         'message': (
             "Great!"
         ),
-        'options': []
+        'options': [],
     },
     "Not interested, I'm still bored": {
         'message': (
             "Some ideas for you to enjoy: \n"
             "https://www.buzzfeed.com/leonoraepstein/things-to-do-when-you-are-bored-out-of-your-mind?utm_term=.qi5x2v7Gd#.qv6JEANy7"
         ),
-        'options': []
+        'options': [],
     },
     "Not really": {
         'message': (
@@ -153,7 +157,7 @@ STATES = {
         'options': [
             "Yeah, I'd love to!",
             "Rather not",
-        ]
+        ],
     },
     "Rather not": {
         'message': (
@@ -349,10 +353,13 @@ STATES = {
         ),
         'options': [
 
-        ]
+        ],
+        'contact': {
+            'name': 'Laila',
+            'phone_number': '+49 674410279'
+        }
     }
 }
-
 
 
 def generate_markup(state):
@@ -374,5 +381,11 @@ def handle_message(answer):
         chat_id,
         next_state['message'],
         reply_markup=markup)
+    if next_state.get('contact'):
+        contact = next_state['contact']
+        bot.send_contact(
+            chat_id,
+            contact['phone_number'],
+            contact['name'])
 
 bot.polling(none_stop=True)
