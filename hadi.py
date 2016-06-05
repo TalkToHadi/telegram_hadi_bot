@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-TOKEN = '239519305:AAH-1nJiWwqyigWQvg-qxZKpo6nnKpGh2sU' #Ponemos nuestro TOKEN generado con el @BotFather
+TOKEN = '228469213:AAEnb6laZGjxnkTQBbEhZuxdEjHFAqhznzc' #Ponemos nuestro TOKEN generado con el @BotFather
 bot = telebot.TeleBot(TOKEN)
 
 STATES = {
