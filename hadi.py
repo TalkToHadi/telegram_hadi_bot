@@ -329,7 +329,7 @@ STATES = {
     "I'm angry": {
         'message': (
             "Try theese: \n",
-            "http://www.apa.org/topics/anger/control.aspx",
+            "http://www.apa.org/topics/anger/control.aspx \n",
             "http://www.mind.org.uk/information-support/types-of-mental-health-problems/anger/#.V1OUhJN95E4"
         ),
         'options': []
